@@ -6,24 +6,25 @@ import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.validation.constraints.NotNull;
 
 @JmixEntity
 @Entity
 public class Employee extends Initiator {
-    @JoinColumn(name = "USER_ID", nullable = false)
-    @NotNull
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "USER_ID")
+    @ManyToOne(fetch = FetchType.LAZY)
     private User user;
 
-    @JoinColumn(name = "POSITION_ID", nullable = false)
-    @NotNull
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "POSITION_ID")
+    @ManyToOne(fetch = FetchType.LAZY)
     private Position position;
 
-    @JoinColumn(name = "DEPARTAMENT_ID", nullable = false)
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "DEPARTAMENT_ID")
+    @ManyToOne(fetch = FetchType.LAZY)
     private Departament departament;
+
+    public void setUser(User user) {
+        this.user = user;
+    }
 
     public Position getPosition() {
         return position;
@@ -45,7 +46,4 @@ public class Employee extends Initiator {
         return user;
     }
 
-    public void setUser(User user) {
-        this.user = user;
-    }
 }

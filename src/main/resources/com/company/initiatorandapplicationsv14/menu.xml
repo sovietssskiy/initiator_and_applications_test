@@ -16,6 +16,8 @@
               caption="msg://com.company.initiatorandapplicationsv14.screen.initiator/initiatorBrowse.menu"/>
         <item screen="ExternalClient.browse"
               caption="msg://com.company.initiatorandapplicationsv14.screen.externalclient/externalClientBrowse.menu"/>
+        <item screen="ApplicationsofInitiators.browse"
+              caption="msg://com.company.initiatorandapplicationsv14.screen.applicationsofinitiators/applicationsofInitiatorsBrowse.menu"/>
     </menu>
 
 </menu-config>

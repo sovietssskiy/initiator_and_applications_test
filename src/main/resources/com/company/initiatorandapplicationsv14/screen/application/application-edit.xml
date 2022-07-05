@@ -25,6 +25,9 @@
                 icon="EDITOR_OK"
                 primary="true"
                 shortcut="${COMMIT_SHORTCUT}"/>
+        <action id="nextStatus"
+                caption="Перевести заявку на следующий этап"
+                primary="true"/>
         <action id="windowClose"
                 caption="msg:///actions.Close"
                 icon="EDITOR_CANCEL"/>
@@ -46,8 +49,8 @@
                         <action id="entityClear" type="entity_clear"/>
                     </actions>
                 </entityPicker>
-                <comboBox id="statusField" property="status"/>
-                <textField id="descriptionField" property="description"/>
+                <comboBox id="statusField" property="status" enable="false"/>
+                <textField id="descriptionField" property="description" align="MIDDLE_LEFT"/>
                 <dateField id="openDateField" property="openDate"/>
                 <dateField id="closeDateField" property="closeDate"/>
             </column>
@@ -55,6 +58,7 @@
         <hbox id="editActions" spacing="true">
             <button id="commitAndCloseBtn" action="windowCommitAndClose"/>
             <button id="closeBtn" action="windowClose"/>
+            <button id="nextBtn" action="nextStatus"/>
         </hbox>
     </layout>
 </window>

@@ -9,7 +9,7 @@ public enum Status implements EnumClass<String> {
 
     OPEN("Open"),
     UNDER_REVIEW("Under review"),
-    NEW_VALUE("A"),
+    ON_APPROVAL(" On approval"),
     ON_AGREEMENT("On agreement"),
     CLOSED("Closed");
 
