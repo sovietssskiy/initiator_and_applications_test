@@ -2,8 +2,6 @@
 <menu-config xmlns="http://jmix.io/schema/ui/menu">
 
     <menu id="application" caption="msg://com.company.initiatorandapplicationsv14/menu.application" insertBefore="administration">
-        <item screen="User.browse" caption="msg://com.company.initiatorandapplicationsv14.screen.user/UserBrowse.caption"/>
-        <item screen="themeSettingsScreen" caption="msg://io.jmix.ui.app.themesettings/themeSettings.caption"/>
         <item screen="Departament.browse"
               caption="msg://com.company.initiatorandapplicationsv14.screen.departament/departamentBrowse.menu"/>
         <item screen="Position_.browse"
@@ -18,6 +16,10 @@
               caption="msg://com.company.initiatorandapplicationsv14.screen.externalclient/externalClientBrowse.menu"/>
         <item screen="ApplicationsofInitiators.browse"
               caption="msg://com.company.initiatorandapplicationsv14.screen.applicationsofinitiators/applicationsofInitiatorsBrowse.menu"/>
+    </menu>
+    <menu id="administration">
+        <item screen="User.browse" caption="msg://com.company.initiatorandapplicationsv14.screen.user/UserBrowse.caption" insertBefore="ui_JmxConsoleScreen"/>
+        <item screen="themeSettingsScreen" caption="msg://io.jmix.ui.app.themesettings/themeSettings.caption" insertBefore="ui_JmxConsoleScreen"/>
     </menu>
 
 </menu-config>

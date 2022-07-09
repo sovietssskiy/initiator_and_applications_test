@@ -179,13 +179,7 @@ public class Application<notification> {
         return executor;
     }
     public  void nextStatus () {
-        if (this.status == "Open")
-            this.status = Status.UNDER_REVIEW.getId();
-        else if (this.status == "Under review")
-            this.status = Status.ON_APPROVAL.getId();
-        else if (this.status == "On approval")
-            this.status = Status.ON_AGREEMENT.getId();
-        else this.status = Status.CLOSED.getId();
+         this.status = Status.CLOSED.getId();
     }
 
     public void setExecutor(Employee executor) {

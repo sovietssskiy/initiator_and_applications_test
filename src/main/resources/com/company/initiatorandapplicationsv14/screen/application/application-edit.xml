@@ -26,7 +26,7 @@
                 primary="true"
                 shortcut="${COMMIT_SHORTCUT}"/>
         <action id="nextStatus"
-                caption="Перевести заявку на следующий этап"
+                caption="msg:///Next status"
                 primary="true"/>
         <action id="windowClose"
                 caption="msg:///actions.Close"
@@ -37,7 +37,7 @@
     <layout spacing="true" expand="editActions">
         <form id="form" dataContainer="applicationDc">
             <column width="350px">
-                <entityPicker id="initiatorField" property="initiator">
+                <entityPicker id="initiatorField" property="initiator" fieldEditable="true">
                     <actions>
                         <action id="entityLookup" type="entity_lookup"/>
                         <action id="entityClear" type="entity_clear"/>
@@ -52,13 +52,13 @@
                 <comboBox id="statusField" property="status" enable="false"/>
                 <textField id="descriptionField" property="description" align="MIDDLE_LEFT"/>
                 <dateField id="openDateField" property="openDate"/>
-                <dateField id="closeDateField" property="closeDate"/>
+                <dateField id="closeDateField" property="closeDate" enable="false"/>
             </column>
         </form>
         <hbox id="editActions" spacing="true">
             <button id="commitAndCloseBtn" action="windowCommitAndClose"/>
             <button id="closeBtn" action="windowClose"/>
-            <button id="nextBtn" action="nextStatus"/>
+            <button id="nextBtn" action="nextStatus" caption="msg://com.company.initiatorandapplicationsv14.screen.application/application.nextBtn"/>
         </hbox>
     </layout>
 </window>

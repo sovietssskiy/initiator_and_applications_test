@@ -16,7 +16,7 @@ import java.util.UUID;
 })
 @Entity
 @DiscriminatorColumn(name = "DTYPE", discriminatorType = DiscriminatorType.STRING)
-public class Initiator {
+public abstract class Initiator {
     @JmixGeneratedValue
     @Column(name = "ID", nullable = false)
     @Id

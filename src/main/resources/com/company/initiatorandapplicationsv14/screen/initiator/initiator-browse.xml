@@ -49,7 +49,12 @@
             <simplePagination/>
             <buttonsPanel id="buttonsPanel"
                           alwaysVisible="true">
-                <button id="createBtn" action="initiatorsTable.create"/>
+                <popupButton id="createBtn" icon="FILE_O" caption="msg:///actions.Create" stylename="primary">
+                    <actions>
+                        <action id="createEmployee"  caption="msg://com.company.initiatorandapplicationsv14.screen.employee/employeeEdit.caption"/>
+                        <action id="createExternalClient" caption="msg://com.company.initiatorandapplicationsv14.screen.externalclient/externalClientEdit.caption"/>
+                    </actions>
+                </popupButton>
                 <button id="editBtn" action="initiatorsTable.edit"/>
                 <button id="removeBtn" action="initiatorsTable.remove"/>
             </buttonsPanel>
