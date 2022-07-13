@@ -31,6 +31,9 @@ public class ApplicationEdit extends StandardEditor<Application> {
 
     @Autowired
     private Notifications notifications;
+    @Autowired
+    private MessageBundle messageBundle;
+
     /*
     * Функция события клика мыши сравнивает инициатора с исполнителем заявки.
     * Если инициатор - внешний клиент или сотрудник, который также является исполнителем, то при нажатии на кнопку пеняется статус заявки.
@@ -51,14 +54,12 @@ public class ApplicationEdit extends StandardEditor<Application> {
                 getEditedEntity().setCloseDate(LocalDateTime.now());
             } else {
                 notifications.create()
-                        .withCaption("The application is closed!(Заявка закрыта!)")
-                        .withDescription("You can't promote it anymore(Вы больше не можете ее продвигать)")
+                        .withCaption(messageBundle.getMessage("applicationEdit.closedStatus"))
                         .show();
             }
         } else {
             notifications.create()
-                    .withCaption("You cannot change the status of the application!(Вы не можете менять статус заявки!)")
-                    .withDescription("The status of this application can only be changed by the employee who initiates it(Статус данной заявки может менять лишь сотрудник, который является ее инициатором)")
+                    .withCaption(messageBundle.getMessage("applicationEdit.noChan"))
                     .show();
         }
 

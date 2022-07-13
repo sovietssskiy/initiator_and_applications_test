@@ -75,5 +75,18 @@
         </insert>
 
     </changeSet>
+<!--    <changeSet id="5" author="initiator-and-applications-v1-4">-->
+<!--        <loadData tableName="USER_" file="com/company/initiatorandapplicationsv14/liquibase/changelog/data/user.csv" separator=";">-->
+<!--            <column name="ID" type="${uuid.type}"/>-->
+<!--            <column name="USERNAME" type="varchar(255)"/>-->
+<!--            <column name="FIRST_NAME" type="varchar(255)"/>-->
+<!--            <column name="LAST_NAME" type="varchar(255)"/>-->
+<!--            <column name="PASSWORD" type="varchar(255)"/>-->
+<!--            <column name="EMAIL" type="varchar(255)"/>-->
+<!--            <column name="ACTIVE" type="boolean"/>-->
+<!--            <column name="VERSION" type="Integer"/>-->
+<!--        </loadData>-->
+
+<!--    </changeSet>-->
 
 </databaseChangeLog>

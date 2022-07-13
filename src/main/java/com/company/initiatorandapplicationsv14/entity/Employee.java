@@ -1,5 +1,7 @@
 package com.company.initiatorandapplicationsv14.entity;
 
+import io.jmix.core.DeletePolicy;
+import io.jmix.core.entity.annotation.OnDeleteInverse;
 import io.jmix.core.metamodel.annotation.JmixEntity;
 
 import javax.persistence.Entity;
@@ -10,6 +12,7 @@ import javax.persistence.ManyToOne;
 @JmixEntity
 @Entity
 public class Employee extends Initiator {
+    @OnDeleteInverse(DeletePolicy.CASCADE)
     @JoinColumn(name = "USER_ID")
     @ManyToOne(fetch = FetchType.LAZY)
     private User user;
